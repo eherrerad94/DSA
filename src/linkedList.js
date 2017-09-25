@@ -24,6 +24,7 @@ export default class LinkedList {
             this.tail.next = node;
             this.tail = node;
         }
+        this.length++;
     }
 
     contains(data) {
@@ -51,6 +52,7 @@ export default class LinkedList {
             node.next = this.head;
             this.head = node;
         }
+        this.length++;
     }
 
     remove(data) {
@@ -66,6 +68,7 @@ export default class LinkedList {
             else if (this.head === current) { //Remove HEAD
                 this.head = current.next;
             }
+            this.length--;
             return true;
         }
 
@@ -77,6 +80,7 @@ export default class LinkedList {
                 } else {
                     current.next = current.next.next;
                 }
+                this.length--;
                 return true;
             }
             current = current.next;
@@ -132,6 +136,10 @@ export default class LinkedList {
             current = tmp;
         }
         this.head = prev;
+    }
+
+    length(){
+        return this.length;
     }
 
 };
