@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import { describe, it, beforeEach } from 'mocha';
 import LinkedList from '../src/linkedList';
 
-describe('LinkedList Testing', () => {
+describe('Single LinkedList', () => {
     let linkedList;
     beforeEach(() => {
         linkedList = new LinkedList();

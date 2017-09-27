@@ -12,7 +12,10 @@ export default class LinkedList {
         this.length = 0;
     }
 
-
+    /**
+     * Add node to the tail of the list
+     * @param {number} data 
+     */
     addLast(data) {
 
         const node = new Node(data);
@@ -27,6 +30,10 @@ export default class LinkedList {
         this.length++;
     }
 
+    /**
+     * Contains a node with this data
+     * @param {number} data 
+     */
     contains(data) {
 
         if (this.isEmpty()) return false;
@@ -41,6 +48,10 @@ export default class LinkedList {
 
     }
 
+    /**
+     * Add node to the head of the list
+     * @param {number} data 
+     */
     addBefore(data) {
         const node = new Node(data);
 
@@ -55,6 +66,24 @@ export default class LinkedList {
         this.length++;
     }
 
+    /**
+     * Return the data of the tail
+     */
+    getTail(){
+        return this.tail.data;
+    }
+
+    /**
+     * Return the data of the head
+     */
+    getHead(){
+        return this.head.data;
+    }
+
+    /**
+     * Return a boolean value if node with data was removed
+     * @param {number} data 
+     */
     remove(data) {
 
         if (this.isEmpty()) return false; // empty list
@@ -88,6 +117,9 @@ export default class LinkedList {
         return false;
     }
 
+    /**
+     * Print the list in order
+     */
     traverse() {
         let current = this.head;
         let string = '';
@@ -99,6 +131,9 @@ export default class LinkedList {
         return string;
         
     }
+    /**
+     * Print the list in reverse order
+     */
     traverseReversal() {
         let string = ''; 
         
@@ -117,10 +152,16 @@ export default class LinkedList {
         return string;
     }
 
+    /**
+     * Return a boolean value that says if list is empty.
+     */
     isEmpty() {
         return this.head === null;
     }
 
+    /**
+     * Reverse the linked list
+     */
     reverse(){
         if(this.isEmpty() || this.tail === this.head) return;
 
@@ -138,30 +179,33 @@ export default class LinkedList {
         this.head = prev;
     }
 
+    /**
+     * Return the length of node of the linked list
+     */
     length(){
         return this.length;
     }
 
 };
 
-console.log('Linked List')
-const linkedList = new LinkedList();
-linkedList.addLast(1); // 1
-linkedList.addLast(2); // 2
-linkedList.addLast(3); // 3
-linkedList.addLast(4); // 4
-linkedList.addLast(5); // 5
-linkedList.addBefore(0); // 0
-console.log(`is empty? : ${linkedList.isEmpty()}`); // false
-console.log(`Traverse:  ${linkedList.traverse()}`); //0  1 2 3 4 5
-console.log(`Contains 100: ${linkedList.contains(100)}`); // false
-console.log(`Contains 1: ${linkedList.contains(1)}`);// True
-console.log(`Contains 0: ${linkedList.contains(0)}`);// True
-console.log(`is empty? : ${linkedList.isEmpty()}`); // false
-console.log(`Remove 3: ${linkedList.remove(3)}`);// True
-console.log(`Traverse:  ${linkedList.traverse()}`); //0 1 2 4 5
-console.log(`TraverseReversal:  ${linkedList.traverseReversal()}`); // 5 4 2 1 0
-linkedList.reverse();
-console.log(`After Reverse:  ${linkedList.traverse()}`); //5 4 2 1 0
-linkedList.reverse();
-console.log(`Traverse:  ${linkedList.traverse()}`); //0 1 2 4 5
+// console.log('Linked List')
+// const linkedList = new LinkedList();
+// linkedList.addLast(1); // 1
+// linkedList.addLast(2); // 2
+// linkedList.addLast(3); // 3
+// linkedList.addLast(4); // 4
+// linkedList.addLast(5); // 5
+// linkedList.addBefore(0); // 0
+// console.log(`is empty? : ${linkedList.isEmpty()}`); // false
+// console.log(`Traverse:  ${linkedList.traverse()}`); //0  1 2 3 4 5
+// console.log(`Contains 100: ${linkedList.contains(100)}`); // false
+// console.log(`Contains 1: ${linkedList.contains(1)}`);// True
+// console.log(`Contains 0: ${linkedList.contains(0)}`);// True
+// console.log(`is empty? : ${linkedList.isEmpty()}`); // false
+// console.log(`Remove 3: ${linkedList.remove(3)}`);// True
+// console.log(`Traverse:  ${linkedList.traverse()}`); //0 1 2 4 5
+// console.log(`TraverseReversal:  ${linkedList.traverseReversal()}`); // 5 4 2 1 0
+// linkedList.reverse();
+// console.log(`After Reverse:  ${linkedList.traverse()}`); //5 4 2 1 0
+// linkedList.reverse();
+// console.log(`Traverse:  ${linkedList.traverse()}`); //0 1 2 4 5

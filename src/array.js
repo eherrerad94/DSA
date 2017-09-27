@@ -6,7 +6,7 @@ export default class MyArray {
 
     /**
      * 
-     * @param {number} data Add value to the array
+     * @param {Number} data Add value to the array
      */
     add(data) {
         this.array.push(data);
@@ -14,7 +14,7 @@ export default class MyArray {
 
     /**
      * 
-     * @param {number} data Search value and remove the value
+     * @param {Number} data Search value and remove the value
      */
     remove(data) {
         this.array = this.array.filter(current => current !== data);
@@ -22,7 +22,7 @@ export default class MyArray {
 
     /**
      * 
-     * @param {number} data Search the value and get the index of the value
+     * @param {Number} data Search the value and get the index of the value
      */
     search(data) {
         const foundIndex = this.array.indexOf(data);
@@ -34,7 +34,7 @@ export default class MyArray {
 
     /**
      * 
-     * @param {number} index Get the value of the index
+     * @param {Number} index Get the value of the index
      */
     getAtIndex(index) {
         return this.array[index];
@@ -52,6 +52,6 @@ export default class MyArray {
      */
     print() {
         let string = this.array.join('');
-        console.log(string.trim());
+        return string;
     }
 }

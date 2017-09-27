@@ -5,7 +5,7 @@ export default class Queue{
 
     /**
      * 
-     * @param {number} value Add value to queue
+     * @param {Number} value Add value to queue
      */
     enqueue(value){
         this.array.push(value);
@@ -44,15 +44,15 @@ export default class Queue{
 
 
 
-let queue = new Queue();
-console.log('Queue: ')
-queue.enqueue(10);
-queue.enqueue(32);
-queue.enqueue(53);
-queue.enqueue(51);
-queue.print();
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
-queue.print();
-console.log();
+// let queue = new Queue();
+// console.log('Queue: ')
+// queue.enqueue(10);
+// queue.enqueue(32);
+// queue.enqueue(53);
+// queue.enqueue(51);
+// queue.print();
+// queue.dequeue();
+// queue.dequeue();
+// queue.dequeue();
+// queue.print();
+// console.log();
